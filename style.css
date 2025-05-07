@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
+  }
+  
+  header.banner {
+    background-color: #c8102e;
+    color: white;
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .banner-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .banner-links {
+    margin-top: 0.5rem;
+  }
+  
+  .banner-links a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .banner-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .container {
+    padding: 2rem;
+  }
+  
+  .hero {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    color: #555;
+  }
+  
+  .carousel-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .carousel-item {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+  
+  .titles h3 {
+    text-align: center;
+    margin: 2rem 0;
+    font-size: 1.8rem;
+    color: #c8102e;
+  }
+  
+  .descricao {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  }
+  
+  .descricao h4 {
+    margin-bottom: 0.5rem;
+    color: #c8102e;
+  }
+  
+  footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  
+
+
+
+  .carousel-wrapper {
+    width: 60vmin;
+    height: 80vmin;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 25s linear infinite;
+    justify-content: center;
+    display: flex;               /* NOVO */
+    justify-content: center;    /* NOVO */
+    align-items: center;        /* NOVO */
+    margin: 0 auto;             /* Centraliza horizontalmente */
+  }
+  
+  .carousel-item {
+    position: absolute;
+    width: 30vmin;
+    height: 45vmin;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    box-shadow: 0 0 500px rgba(255, 0, 0, 0.2);
+    justify-content: center;
+  }
+  
+  /* Distribuindo os itens em círculo */
+  .carousel-item:nth-child(1) { transform: rotateY(0deg) translateZ(40vmin); }
+  .carousel-item:nth-child(2) { transform: rotateY(72deg) translateZ(40vmin); }
+  .carousel-item:nth-child(3) { transform: rotateY(144deg) translateZ(40vmin); }
+  .carousel-item:nth-child(4) { transform: rotateY(216deg) translateZ(40vmin); }
+  .carousel-item:nth-child(5) { transform: rotateY(288deg) translateZ(40vmin); }
+  .carousel-item:nth-child(6) { transform: rotateY(288deg) translateZ(40vmin); }
+  .carousel-item:nth-child(7) { transform: rotateY(288deg) translateZ(40vmin); }
+  
+  @keyframes rotate {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  
